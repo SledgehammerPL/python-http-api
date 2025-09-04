@@ -379,7 +379,7 @@ class SummaryV3(Serializable):
 SummaryType = TypeVar('SummaryType', SummaryV1, SummaryV2, SummaryV3, covariant=True)
 
 class TransactionV1(Serializable):
-    def init(self, operation_type: str, id_: str, asset: Optional[str], when: int, sum_: float,
+    def __init__(self, operation_type: str, id_: str, asset: Optional[str], when: int, sum_: float,
              symbol_id: Optional[str] = None, account_id: Optional[str] = None, value_date: Optional[str] = None,
              order_id: Optional[str] = None, order_pos: Optional[int] = None,
              uuid_: Optional[str] = None, parent_uuid: Optional[str] = None,
